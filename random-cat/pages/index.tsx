@@ -1,5 +1,6 @@
 import { GetServerSideProps, NextPage } from "next";
 import { useState } from "react";
+import styles from "./index.module.css";
 
 // getServerSidePropsから渡されるpropsの型
 type Props = {
@@ -21,9 +22,13 @@ const IndexPage: NextPage<Props> = ({ initialImageUrl }) => {
     }
     // ローディング中でなければ、画像を表示する
     return (
-        <div>
-            <button onClick={handleClick}>他の猫も見る</button>
-            <div>{loading || <img src={imageUrl} />}</div>
+        <div className={styles.page}>
+            <button onClick={handleClick} className={styles.button}>
+                他のにゃんこも見る
+            </button>
+            <div className={styles.frame}>
+                {loading || <img src={imageUrl} className={styles.img} />}
+            </div>
         </div>
     );
 };
