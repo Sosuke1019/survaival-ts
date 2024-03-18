@@ -32,3 +32,13 @@
     - getStatigProps
     - getInitialProps
 - `module.css`で終わるファイルはCSS Modulesといい、CSSファイル内で定義したクラス名をTypeScriptからオブジェクトとして参照できるようになる
+
+## Vercelでデプロイする
+- VercelはNext.jsを開発しているVercel社が提供しているフロントエンド向けのクラウドプラットフォーム
+- JsやCSSファイルを自動で圧縮してCDN環境で配信
+
+## Jestでテストを書こう
+- JestはJsのテストフレームワーク
+- フロントエンドライブラリのReactやVueなどのテストだけでなく、Node.js向けのパッケージのテストも行える
+- つまり、JsやTsで書かれたコードであれば、そのほとんどはJestでテストできる。
+- Jestではexpect関数とマッチャ―を使って、結果が期待する値になっているかを記述する
